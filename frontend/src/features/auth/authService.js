@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BACKEND_DOMAIN = "http://localhost:8000"
+const BACKEND_DOMAIN = "http://desarrollodtic.pol.una.py:8000"
 
 const REGISTER_URL = `${BACKEND_DOMAIN}/api/v1/auth/users/`
 const LOGIN_URL = `${BACKEND_DOMAIN}/api/v1/auth/jwt/create/`

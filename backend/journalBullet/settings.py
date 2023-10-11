@@ -35,6 +35,9 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:1010",
     "http://localhost:1010",
     "http://desarrollodtic.pol.una.py:1010",
+    "http://desarrollodtic.pol.una.py:8000",
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
 ]
 
 
