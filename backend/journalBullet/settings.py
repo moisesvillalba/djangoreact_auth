@@ -29,12 +29,14 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['desarrollodtic.pol.una.py']
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:1010",
     "http://localhost:1010",
+    "http://desarrollodtic.pol.una.py:1010",
 ]
+
 
 # Application definition
 
