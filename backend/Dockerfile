@@ -16,5 +16,9 @@ COPY . /app/
 # Expone el puerto 8000 en el contenedor
 EXPOSE 8000
 
+# Ejecuta 'migrate' durante la construcción de la imagen
+RUN python manage.py makemigrations
+RUN python manage.py migrate
+
 # Comando para ejecutar automáticamente el servidor de desarrollo de Django
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
