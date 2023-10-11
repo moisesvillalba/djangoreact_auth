@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  web:
+    container_name: django
+    build:
+      context: ./backend
+    image: django_image  # Nombre de imagen y etiqueta personalizados
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+  frontend:
+    container_name: react
+    build:
+      context: ./frontend
+    image: react_vite_image  # Nombre de imagen y etiqueta personalizados
+    ports:
+      - "1010:1010"  # Exponer el frontend en el puerto 1010
+    volumes:
+      - ./frontend:/app
+    command: ["/bin/sh", "-c", "npm install && npm run dev"]
